@@ -1,0 +1,39 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+#Enter marks of 10 students and see the summarized data Using table,barplot,piechart
+name<- c("Rob","jack","Bob","Jacob","Ravi","Rohit","Virat","Rahul","Samir","Roshan")
+marks<- c(471,455,128,369,155,NA,490,466,444,92)
+status<- c("Pass","Pass","Fail","Pass","Fail","With held","Pass","Pass","Pass","Fail")
+
+df<- data.frame(name,marks,status)
+df
+summary(df)
+sum(df$marks,na.rm = TRUE)
+
+table(df$status)
+
+library(ggplot2)
+
+#bargraph
+x<- table(df$status)
+barplot(x)
+ggplot(df,aes(df$status))+geom_bar(aes(fill=factor(df$status)))
+
+#pie-chart
+y<- table(status)
+names(y) = c("Fail","Pass","With held")
+pie(y)
+
+
+
+
+
+
+
+
+```
+
