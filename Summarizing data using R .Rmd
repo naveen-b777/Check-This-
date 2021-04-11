@@ -5,6 +5,8 @@ output: html_notebook
 
 ```{r}
 #Enter marks of 10 students and see the summarized data Using table,barplot,piechart
+
+
 name<- c("Rob","jack","Bob","Jacob","Ravi","Rohit","Virat","Rahul","Samir","Roshan")
 marks<- c(471,455,128,369,155,NA,490,466,444,92)
 status<- c("Pass","Pass","Fail","Pass","Fail","With held","Pass","Pass","Pass","Fail")
